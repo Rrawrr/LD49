@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 namespace project
 {
     public class Controller : MonoBehaviour
     {
-        private Camera camera;
+        public static Controller I { get; private set; }
 
-        [SerializeField] private float force;
+        private Camera camera;
+        [SerializeField] private float force = 2f;
+        [SerializeField] private float cameraRotation = 3f;
+        [SerializeField] private GameObject playerObject;
+        [SerializeField] private CinemachineVirtualCamera cameraVirt;
+
 
         void Awake()
         {
-            camera = GetComponent<Camera>();
+            if (I != null && I != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                camera = GetComponent<Camera>();
+                I = this;
+            }
+
         }
 
         void Update()
@@ -25,6 +40,15 @@ namespace project
             {
                 HitObject(force * 2);
             }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                cameraVirt.transform.Rotate(Vector3.up,cameraRotation,Space.World);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                cameraVirt.transform.Rotate(Vector3.up, -cameraRotation, Space.World);
+            }
         }
 
         private void HitObject(float force)
@@ -36,11 +60,21 @@ namespace project
                 Debug.Log($"{hit.transform.name} was clicked");
                 Debug.DrawRay(transform.position, hit.point - transform.position, Color.red, Mathf.Infinity);
 
-                if (hit.transform.GetComponent<Player>())
+                if(hit.transform.gameObject == playerObject)
                 {
-                    hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(Vector3.forward * force, hit.point, ForceMode.Impulse);//TODO change the angle of impulse
+                    Vector3 forceDirection = hit.point - camera.transform.position;
+                    hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * force, hit.point, ForceMode.Impulse);//TODO change the angle of impulse
+                    Debug.DrawRay(hit.point, forceDirection, Color.green, Mathf.Infinity);
                 }
+
             }
+        }
+
+        public void SetPlayerObject(GameObject go)
+        {
+            playerObject = go;
+            cameraVirt.Follow = go.transform;
+            cameraVirt.LookAt = go.transform;
         }
     }
 }
