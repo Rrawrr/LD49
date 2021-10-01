@@ -62,8 +62,8 @@ namespace project
 
                 if(hit.transform.gameObject == playerObject)
                 {
-                    Vector3 forceDirection = hit.point - camera.transform.position;
-                    hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * force, hit.point, ForceMode.Impulse);//TODO change the angle of impulse
+                    Vector3 forceDirection = Vector3.ProjectOnPlane(transform.forward,playerObject.transform.up);
+                    hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * force, hit.point, ForceMode.Impulse);
                     Debug.DrawRay(hit.point, forceDirection, Color.green, Mathf.Infinity);
                 }
 
