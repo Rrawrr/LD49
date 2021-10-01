@@ -62,7 +62,7 @@ namespace project
 
                 if(hit.transform.gameObject == playerObject)
                 {
-                    Vector3 forceDirection = Vector3.ProjectOnPlane(transform.forward,playerObject.transform.up);
+                    Vector3 forceDirection = Vector3.ProjectOnPlane(transform.forward,Vector3.up);
                     hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * force, hit.point, ForceMode.Impulse);
                     Debug.DrawRay(hit.point, forceDirection, Color.green, Mathf.Infinity);
                 }
