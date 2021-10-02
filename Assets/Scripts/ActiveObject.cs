@@ -5,6 +5,7 @@ namespace project
 {
     public class ActiveObject : MonoBehaviour
     {
+        [SerializeField] private float delayToChangeObject = 2f;
         private const string TOUCHABLE_TAG = "Touchable";
         private bool isActive = true;
 
@@ -36,7 +37,7 @@ namespace project
         IEnumerator DeactivateOldActiveGameObjectCoroutine(GameObject other)
         {
             GetComponent<MeshRenderer>().material.color = Color.green;
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(delayToChangeObject);
             Destroy(gameObject.GetComponent<ActiveObject>());
         }
     }
