@@ -9,29 +9,36 @@ namespace project
     {
         public static Controller I { get; private set; }
 
-
         [SerializeField] private CinemachineVirtualCamera cameraVirt;
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
-        [SerializeField] private GameObject _activeObject;
 
+        [SerializeField] private GameObject _activeObject;
         private GameObject activeObject
         {
             get => _activeObject;
             set
             {
                 _activeObject = value;
-                activeObjectRigidbody = _activeObject.GetComponent<Rigidbody>();
             }
         }
 
+        [SerializeField] private GameObject particles;
+
         private Camera camera;
-        private Rigidbody activeObjectRigidbody;
         private int jumpCount;
-        private bool isCanJump = true;
 
-
+        private bool _isCanJump;
+        public bool isCanJump
+        {
+            get => _isCanJump;
+            set
+            {
+                jumpCount = 0;
+                _isCanJump = value;
+            }
+        }
 
         void Awake()
         {
@@ -62,12 +69,6 @@ namespace project
                 {
                     AddImpulseToJump();
                 }
-            }
-
-            if (activeObjectRigidbody.velocity.y == 0 && !isCanJump)
-            {
-                Debug.Log($"{gameObject.name} is grounded");
-                isCanJump = true;
             }
 
             if (Input.GetKey(KeyCode.A))
@@ -117,7 +118,6 @@ namespace project
                     jumpCount++;
                     if (jumpCount >= 2)
                     {
-                        jumpCount = 0;
                         isCanJump = false;
                     }
                 }
@@ -131,5 +131,11 @@ namespace project
             cameraVirt.Follow = go.transform;
             cameraVirt.LookAt = go.transform;
         }
+
+        public void PlayParticlesAtPosition(Vector3 pos)
+        {
+            Instantiate(particles, pos,Quaternion.identity);
+        }
+
     }
 }
