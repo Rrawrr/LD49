@@ -1776,6 +1776,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9198238480985741159, guid: 08edd2feaa61f9f47bec77ad6aa61e74, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 3330362192147748220, guid: 7492adae79061004e853184d11e82b6b, type: 3}
+    - target: {fileID: 9198238480985741159, guid: 08edd2feaa61f9f47bec77ad6aa61e74, type: 3}
       propertyPath: cameraVirt
       value: 
       objectReference: {fileID: 1041565868}

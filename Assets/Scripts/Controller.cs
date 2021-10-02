@@ -13,20 +13,20 @@ namespace project
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
-        [SerializeField] private GameObject _activeObject;
 
+        [SerializeField] private GameObject _activeObject;
         private GameObject activeObject
         {
             get => _activeObject;
             set
             {
                 _activeObject = value;
-                activeObjectRigidbody = _activeObject.GetComponent<Rigidbody>();
             }
         }
 
+        [SerializeField] private GameObject particles;
+
         private Camera camera;
-        private Rigidbody activeObjectRigidbody;
         private int jumpCount;
 
         private bool _isCanJump;
@@ -131,5 +131,11 @@ namespace project
             cameraVirt.Follow = go.transform;
             cameraVirt.LookAt = go.transform;
         }
+
+        public void PlayParticlesAtPosition(Vector3 pos)
+        {
+            Instantiate(particles, pos,Quaternion.identity);
+        }
+
     }
 }

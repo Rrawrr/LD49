@@ -36,7 +36,9 @@ namespace project
                 Controller.I.SetPlayerObject(other);
                 other.GetComponent<MeshRenderer>().material.color = Color.red;
                 other.gameObject.AddComponent<ActiveObject>();
-               
+
+                Controller.I.PlayParticlesAtPosition(other.transform.position);
+
                 StartCoroutine(DeactivateOldActiveGameObjectCoroutine());
             }
         }
