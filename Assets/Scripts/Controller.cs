@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace project
 {
@@ -79,6 +80,11 @@ namespace project
             {
                 cameraVirt.transform.Rotate(Vector3.up, -cameraRotation, Space.World);
             }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Restart();
+            }
         }
 
         private void AddHorizontalImpulse()
@@ -135,6 +141,12 @@ namespace project
         public void PlayParticlesAtPosition(Vector3 pos)
         {
             Instantiate(particles, pos,Quaternion.identity);
+        }
+
+
+        private void Restart()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
     }
