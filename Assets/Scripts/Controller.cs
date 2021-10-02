@@ -9,7 +9,6 @@ namespace project
     {
         public static Controller I { get; private set; }
 
-
         [SerializeField] private CinemachineVirtualCamera cameraVirt;
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
@@ -29,9 +28,17 @@ namespace project
         private Camera camera;
         private Rigidbody activeObjectRigidbody;
         private int jumpCount;
-        private bool isCanJump = true;
 
-
+        private bool _isCanJump;
+        public bool isCanJump
+        {
+            get => _isCanJump;
+            set
+            {
+                jumpCount = 0;
+                _isCanJump = value;
+            }
+        }
 
         void Awake()
         {
@@ -62,12 +69,6 @@ namespace project
                 {
                     AddImpulseToJump();
                 }
-            }
-
-            if (activeObjectRigidbody.velocity.y == 0 && !isCanJump)
-            {
-                Debug.Log($"{gameObject.name} is grounded");
-                isCanJump = true;
             }
 
             if (Input.GetKey(KeyCode.A))
@@ -117,7 +118,6 @@ namespace project
                     jumpCount++;
                     if (jumpCount >= 2)
                     {
-                        jumpCount = 0;
                         isCanJump = false;
                     }
                 }
