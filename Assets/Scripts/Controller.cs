@@ -9,15 +9,35 @@ namespace project
     {
         public static Controller I { get; private set; }
 
-        private Camera camera;
-        [SerializeField] private float force = 2f;
-        [SerializeField] private float cameraRotation = 3f;
-        [SerializeField] private GameObject playerObject;
+
         [SerializeField] private CinemachineVirtualCamera cameraVirt;
+        [SerializeField] private float force = 2f;
+        [SerializeField] private float jumpForce = 3f;
+        [SerializeField] private float cameraRotation = 2f;
+        [SerializeField] private GameObject _activeObject;
+
+        private GameObject activeObject
+        {
+            get => _activeObject;
+            set
+            {
+                _activeObject = value;
+                activeObjectRigidbody = _activeObject.GetComponent<Rigidbody>();
+            }
+        }
+
+        private Camera camera;
+        private Rigidbody activeObjectRigidbody;
+        private int jumpCount;
+        private bool isCanJump = true;
+
 
 
         void Awake()
         {
+            activeObject = _activeObject;
+            SetPlayerObject(activeObject);
+
             if (I != null && I != this)
             {
                 Destroy(gameObject);
@@ -34,11 +54,20 @@ namespace project
         {
             if (Input.GetMouseButtonDown(0))
             {
-                HitObject(force);
+                AddHorizontalImpulse();
             }
             if (Input.GetMouseButtonDown(1))
             {
-                HitObject(force * 2);
+                if (isCanJump)
+                {
+                    AddImpulseToJump();
+                }
+            }
+
+            if (activeObjectRigidbody.velocity.y == 0 && !isCanJump)
+            {
+                Debug.Log($"{gameObject.name} is grounded");
+                isCanJump = true;
             }
 
             if (Input.GetKey(KeyCode.A))
@@ -51,7 +80,7 @@ namespace project
             }
         }
 
-        private void HitObject(float force)
+        private void AddHorizontalImpulse()
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -60,7 +89,7 @@ namespace project
                 Debug.Log($"{hit.transform.name} was clicked");
                 Debug.DrawRay(transform.position, hit.point - transform.position, Color.red, Mathf.Infinity);
 
-                if(hit.transform.gameObject == playerObject)
+                if(hit.transform.gameObject == activeObject)
                 {
                     Vector3 forceDirection = Vector3.ProjectOnPlane(transform.forward,Vector3.up);
                     hit.transform.GetComponent<Rigidbody>().AddForceAtPosition(forceDirection * force, hit.point, ForceMode.Impulse);
@@ -70,9 +99,35 @@ namespace project
             }
         }
 
+        private void AddImpulseToJump()
+        {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                Debug.Log($"{hit.transform.name} was clicked");
+                Debug.DrawRay(transform.position, hit.point - transform.position, Color.red, Mathf.Infinity);
+
+                if (hit.transform.gameObject == activeObject)
+                {
+                    Vector3 forceDirection = transform.up;
+                    hit.transform.GetComponent<Rigidbody>().AddForce(forceDirection * jumpForce, ForceMode.Impulse);
+                    Debug.DrawRay(hit.point, forceDirection, Color.green, Mathf.Infinity);
+
+                    jumpCount++;
+                    if (jumpCount >= 2)
+                    {
+                        jumpCount = 0;
+                        isCanJump = false;
+                    }
+                }
+
+            }
+        }
+
         public void SetPlayerObject(GameObject go)
         {
-            playerObject = go;
+            activeObject = go;
             cameraVirt.Follow = go.transform;
             cameraVirt.LookAt = go.transform;
         }

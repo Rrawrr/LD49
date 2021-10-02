@@ -1548,10 +1548,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 481197277150312525, guid: 096ac835d720e234da9ca1095c18fcbb, type: 3}
-      propertyPath: m_DampingWhenOccluded
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 481197278124110048, guid: 096ac835d720e234da9ca1095c18fcbb, type: 3}
       propertyPath: m_Name
       value: CM vcam1
@@ -1784,7 +1780,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1041565868}
     - target: {fileID: 9198238480985741159, guid: 08edd2feaa61f9f47bec77ad6aa61e74, type: 3}
-      propertyPath: playerObject
+      propertyPath: _activeObject
       value: 
       objectReference: {fileID: 1464622018}
     m_RemovedComponents: []
