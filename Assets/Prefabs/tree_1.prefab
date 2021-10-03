@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 331641643271896858}
   - component: {fileID: 331641643271896859}
   - component: {fileID: 331641643271896860}
-  - component: {fileID: 331641643271896861}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -753,7 +752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 285876de39cb34422becf99e8b9a4dcf, type: 2}
+  - {fileID: 2100000, guid: c97abbf45738b4ac0880aefcaae98033, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -783,20 +782,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331641643271896862}
   m_Mesh: {fileID: 0}
---- !u!64 &331641643271896861
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331641643271896862}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &331641644143442742
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +794,6 @@ GameObject:
   - component: {fileID: 331641644143442738}
   - component: {fileID: 331641644143442739}
   - component: {fileID: 331641644143442740}
-  - component: {fileID: 331641644143442741}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -825,7 +809,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331641644143442742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: -0.036, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8600100143255115920}
@@ -10355,20 +10339,6 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331641644143442742}
-  m_Mesh: {fileID: 0}
---- !u!64 &331641644143442741
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 331641644143442742}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
 --- !u!1 &5348737682414657091
 GameObject:
