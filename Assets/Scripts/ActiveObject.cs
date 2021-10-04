@@ -24,6 +24,8 @@ namespace project
             {
                 GameObject otherGO = other.gameObject;
                 ChangeActiveObject(otherGO);
+
+                Controller.I.TryToCompleteFindingObject(other.gameObject);
             }
 
             Controller.I.isCanJump = true;
