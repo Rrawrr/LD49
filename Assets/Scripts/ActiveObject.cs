@@ -5,7 +5,7 @@ namespace project
 {
     public class ActiveObject : MonoBehaviour
     {
-        [SerializeField] private float delayToChangeObject = 2f;
+        [SerializeField] private float delayToChangeObject = 3f;
         private const string TOUCHABLE_TAG = "Touchable";
         private bool isActive;
 

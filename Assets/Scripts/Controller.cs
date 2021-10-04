@@ -5,6 +5,7 @@ using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 namespace project
 {
@@ -16,6 +17,7 @@ namespace project
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
+        [SerializeField] private int itemsToSpawn = 20;
 
         [SerializeField] private GameObject _activeObject;
         [SerializeField] private TextMeshProUGUI objectsText;
@@ -29,7 +31,7 @@ namespace project
         }
 
         [SerializeField] private GameObject particles;
-        //[SerializeField] public Dictionary<GameObject,string> objectsToFind;
+        [SerializeField] private Transform boundsTransform;
         [Serializable]
         public struct ObjectToFind
         {
@@ -38,6 +40,7 @@ namespace project
         }
 
         public List<ObjectToFind> objectsToFind; 
+        [SerializeField] private List<GameObject> items;
 
 
         private Camera camera;
@@ -98,6 +101,11 @@ namespace project
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Restart();
+            }
+
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                CreateRandomItems();
             }
         }
 
@@ -188,8 +196,9 @@ namespace project
                 Debug.Log($"Found object {GetObjectToFind(obj)}");
                 var foundedObject = GetObjectToFind(obj);
                 objectsToFind.Remove(foundedObject);
-
                 SetObjectsNamesList();
+
+                CreateRandomItems();
             }
         }
 
@@ -202,6 +211,31 @@ namespace project
                 string name = $"{obj.name} \n";
                 objectsText.text += name;
             }
+        }
+
+
+        private void CreateRandomItems()
+        {
+            for (int i = 0; i < itemsToSpawn; i++)
+            {
+                var rndItem = items[UnityEngine.Random.Range(0, items.Count)];
+                Vector3 rndPos = RandomPointInBounds(boundsTransform.GetComponent<Renderer>().bounds);
+                Instantiate(rndItem, rndPos, Quaternion.identity);
+            }
+            //foreach (var item in items)
+            //{
+            //    Vector3 rndPos = RandomPointInBounds(boundsTransform.GetComponent<Renderer>().bounds);
+            //    Instantiate(item, rndPos, Quaternion.identity);
+            //}
+        }
+
+        public static Vector3 RandomPointInBounds(Bounds bounds)
+        {
+            return new Vector3(
+                UnityEngine.Random.Range(bounds.min.x, bounds.max.x),
+                UnityEngine.Random.Range(bounds.min.y, bounds.max.y),
+                UnityEngine.Random.Range(bounds.min.z, bounds.max.z)
+            );
         }
 
     }

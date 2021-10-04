@@ -101,7 +101,67 @@ MonoBehaviour:
   force: 8
   jumpForce: 5
   cameraRotation: 2
+  itemsToSpawn: 20
   _activeObject: {fileID: 0}
+  objectsText: {fileID: 0}
+  particles: {fileID: 3330362192147748220, guid: 7492adae79061004e853184d11e82b6b, type: 3}
+  boundsTransform: {fileID: 0}
+  objectsToFind:
+  - go: {fileID: 0}
+    name: BBQ
+  - go: {fileID: 0}
+    name: Car
+  - go: {fileID: 0}
+    name: Misha
+  - go: {fileID: 0}
+    name: Apple
+  - go: {fileID: 0}
+    name: UFO
+  items:
+  - {fileID: 7307525006652988433, guid: ce2a9a1eae073984faffb7adc42d4474, type: 3}
+  - {fileID: 622584388588596539, guid: 12676fdfdc4e0144f90c8eb27c3b0d61, type: 3}
+  - {fileID: 6101650680412283338, guid: cff363e2f39568447b19df9ed0b74c98, type: 3}
+  - {fileID: 6811134185619346470, guid: 72e8b96ae0661064a990da1148a09cb2, type: 3}
+  - {fileID: 3099612530551814874, guid: ecc0738eb5445ec4bb9f253877301d4a, type: 3}
+  - {fileID: 3136116659431629869, guid: 320bc24bdfc721b4a8b31b6a36be941c, type: 3}
+  - {fileID: 6353633198829317177, guid: 12eafa26cc578704680438a469e2625f, type: 3}
+  - {fileID: 3978084988145938093, guid: e093b81301d70a3429e233b7e9c6ecce, type: 3}
+  - {fileID: 7839726572729950158, guid: 9fe73a37c1104b74b9abc8e29b42a731, type: 3}
+  - {fileID: 8846096901752278823, guid: 0f22ac7f3c1fdd64187bba0a419c593c, type: 3}
+  - {fileID: 4422676756031576734, guid: f3c44fafe258d4147a2fb1d68bad4835, type: 3}
+  - {fileID: 3038613498053259301, guid: 1fbaf97c4b3040d43b0820d9ebd395f1, type: 3}
+  - {fileID: 6455504811403013853, guid: 900c850afa18cf64ca28f17e201e5486, type: 3}
+  - {fileID: 8896634797090227753, guid: 91ab0363d1ff6554c86baf7a820b7aab, type: 3}
+  - {fileID: 3395754200377450249, guid: 23d126c32ee53cc4c8cb0a7b3cf084ee, type: 3}
+  - {fileID: 6936729072099026298, guid: 69031ea7db2178c4ea1eb402e44ccf91, type: 3}
+  - {fileID: 272293035563681834, guid: f040e04a2b6394a449fb76e330157094, type: 3}
+  - {fileID: 2750444353140817484, guid: 3f60673999c400042ad99cd39847bc98, type: 3}
+  - {fileID: 3345448514277653895, guid: b932fa3c6a70cd7418f4d3248a2f5eaf, type: 3}
+  - {fileID: 641499749314863438, guid: 1d623678711e6954583cbe9f2e24c021, type: 3}
+  - {fileID: 2903754782448491468, guid: 8fc5fe48593390c4ca66466193903b46, type: 3}
+  - {fileID: 6951703860493697895, guid: ae861fe41f9d0da45a734739633c8961, type: 3}
+  - {fileID: 1451044948750571100, guid: cc49006d36ef02a4e90783edb429cbe7, type: 3}
+  - {fileID: 1129587248616654398, guid: a34503065b1c853429b1fb94e1eb888c, type: 3}
+  - {fileID: 2812320869469422540, guid: 46786e519f3b360478f3c15b1f36c38f, type: 3}
+  - {fileID: 8609865190985092995, guid: f4cb6ea14abb9744dbe9149dbc4cb39f, type: 3}
+  - {fileID: 5612454794866062706, guid: 4e83488dfad41574b98709a6ff56abd5, type: 3}
+  - {fileID: 2095904733547978117, guid: 17488e07d2cc177479b0b4824467d6c9, type: 3}
+  - {fileID: 4280605650493611577, guid: 291b45eb5fb75354b90e4125eb51d14b, type: 3}
+  - {fileID: 8550028590507417389, guid: a8b4f5061e5f6b9438b26174ebc0e70e, type: 3}
+  - {fileID: 95139289116430273, guid: f6b486abcec9c384ea5e40a792c07bbe, type: 3}
+  - {fileID: 8198906860540445578, guid: 4c3cffa0923f9d54f85fbf9c65b94bcf, type: 3}
+  - {fileID: 7332315243056333184, guid: 3035257fa65898d43895a0ea0552a0f4, type: 3}
+  - {fileID: 11167117431522993, guid: 46380642f5a70f7458603ed205582819, type: 3}
+  - {fileID: 7682522572999486677, guid: ff052968503a4c046bdcf07cbc5f4d5d, type: 3}
+  - {fileID: 8713289905505602547, guid: 766dca7b5bddf4541be05a1cbd2a13fb, type: 3}
+  - {fileID: 772419827150536365, guid: e19041e5cbe42434a876549f0f3a5bd6, type: 3}
+  - {fileID: 1527702961535933546, guid: 5f7ac64ca3c977e4d955231208f35b9a, type: 3}
+  - {fileID: 6886037168875500766, guid: 0011035ed25bdbc449d0babdd5026c31, type: 3}
+  - {fileID: 3091703536073717538, guid: 99dc1e9f8a3d07c4fb11b00fe5830339, type: 3}
+  - {fileID: 6487405013273292993, guid: 1dc3dada3e8b85946950e4a6f5748330, type: 3}
+  - {fileID: 8476684778129772331, guid: 22ac9f75f84074d4da6d468ed0685adb, type: 3}
+  - {fileID: 7041630248383402955, guid: 7915928b7200faf489c314338e79f5a3, type: 3}
+  - {fileID: 6024141787533753661, guid: ee3b6c08ca996a646b5e8228be50416d, type: 3}
 --- !u!114 &9198238480985741156
 MonoBehaviour:
   m_ObjectHideFlags: 0
