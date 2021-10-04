@@ -6,6 +6,7 @@ namespace project
     public class ActiveObject : MonoBehaviour
     {
         [SerializeField] private float delayToChangeObject = 3f;
+        [SerializeField] private GameObject particles;
         private const string TOUCHABLE_TAG = "Touchable";
         private bool isActive;
 
@@ -18,7 +19,7 @@ namespace project
 
         void OnCollisionEnter(Collision other)
         {
-            Debug.Log($"Collision from {gameObject.name}");
+            //Debug.Log($"Collision from {gameObject.name}");
 
             if (other.gameObject.tag == TOUCHABLE_TAG)
             {
@@ -39,7 +40,7 @@ namespace project
                 //other.GetComponent<MeshRenderer>().material.color = Color.red;
                 other.gameObject.AddComponent<ActiveObject>();
 
-                Controller.I.PlayParticlesAtPosition(other.transform.position);
+                Controller.I.PlayParticlesAtPosition(other.transform);
 
                 StartCoroutine(DeactivateOldActiveGameObjectCoroutine());
             }
@@ -47,10 +48,17 @@ namespace project
 
         IEnumerator DeactivateOldActiveGameObjectCoroutine()
         {
+            var particles = GetComponentsInChildren<ParticleSystem>();
+            foreach (var part in particles)
+            {
+                part.Stop();
+            }
             isActive = false;
             //GetComponent<MeshRenderer>().material.color = Color.green;
             yield return new WaitForSeconds(delayToChangeObject);
             Destroy(gameObject.GetComponent<ActiveObject>());
         }
+
+
     }
 }

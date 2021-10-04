@@ -17,7 +17,7 @@ namespace project
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
-        [SerializeField] private int itemsToSpawn = 20;
+        [SerializeField] private int itemsToSpawn = 10;
 
         [SerializeField] private GameObject _activeObject;
         [SerializeField] private TextMeshProUGUI objectsText;
@@ -41,6 +41,9 @@ namespace project
 
         public List<ObjectToFind> objectsToFind; 
         [SerializeField] private List<GameObject> items;
+        private AudioSource audioSource;
+        [SerializeField] private AudioClip[] clips;
+        private int audioNumber;
 
 
         private Camera camera;
@@ -59,6 +62,7 @@ namespace project
 
         void Awake()
         {
+            audioSource = GetComponent<AudioSource>();
             activeObject = _activeObject;
             SetPlayerObject(activeObject);
             SetObjectsNamesList();
@@ -73,6 +77,13 @@ namespace project
                 I = this;
             }
 
+        }
+
+        void Start()
+        {
+            audioSource.clip = clips[0];
+            audioNumber = 0;
+            audioSource.Play();
         }
 
         void Update()
@@ -101,6 +112,17 @@ namespace project
             if (Input.GetKeyDown(KeyCode.R))
             {
                 Restart();
+            }
+
+            if (!audioSource.isPlaying)
+            {
+                audioNumber++;
+                audioSource.clip = clips[audioNumber];
+                audioSource.Play();
+                if (audioNumber >= 2)
+                {
+                    audioNumber = 0;
+                }
             }
 
             //if (Input.GetKeyDown(KeyCode.P))
@@ -160,9 +182,9 @@ namespace project
             cameraVirt.LookAt = go.transform;
         }
 
-        public void PlayParticlesAtPosition(Vector3 pos)
+        public void PlayParticlesAtPosition(Transform transform)
         {
-            Instantiate(particles, pos,Quaternion.identity);
+            Instantiate(particles, transform.position,Quaternion.identity,transform);
         }
 
 
@@ -193,7 +215,7 @@ namespace project
         {
             if (isObjectToFind(obj))
             {
-                Debug.Log($"Found object {GetObjectToFind(obj)}");
+                //Debug.Log($"Found object {GetObjectToFind(obj)}");
                 var foundedObject = GetObjectToFind(obj);
                 objectsToFind.Remove(foundedObject);
                 SetObjectsNamesList();
