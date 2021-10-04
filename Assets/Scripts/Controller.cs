@@ -103,10 +103,10 @@ namespace project
                 Restart();
             }
 
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                CreateRandomItems();
-            }
+            //if (Input.GetKeyDown(KeyCode.P))
+            //{
+            //    CreateRandomItems();
+            //}
         }
 
         private void AddHorizontalImpulse()
