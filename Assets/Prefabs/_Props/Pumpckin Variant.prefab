@@ -42,6 +42,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 32.752876
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 32.752876
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 28.006142
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
       objectReference: {fileID: 0}
@@ -83,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
       propertyPath: m_Name
-      value: Pumpckin
+      value: Pumpckin Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4581624028ac813409ced2f563ecd6a5, type: 3}
       propertyPath: m_TagString
