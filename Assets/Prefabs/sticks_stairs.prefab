@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 285447820603994325}
   - component: {fileID: 3409466933383645912}
   - component: {fileID: 3380760771481200914}
-  - component: {fileID: 6894988920833927619}
   m_Layer: 0
   m_Name: sticks_stairs (11)
   m_TagString: Untagged
@@ -551,20 +550,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918813396013768683}
   m_Mesh: {fileID: 0}
---- !u!64 &6894988920833927619
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918813396013768683}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &1557258798176365560
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +562,6 @@ GameObject:
   - component: {fileID: 1242711291943829025}
   - component: {fileID: 3514710918219749902}
   - component: {fileID: 4471584158015401807}
-  - component: {fileID: 3427804362625307326}
   m_Layer: 0
   m_Name: sticks_stairs (12)
   m_TagString: Untagged
@@ -1116,20 +1100,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557258798176365560}
   m_Mesh: {fileID: 0}
---- !u!64 &3427804362625307326
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1557258798176365560}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2175605872283650046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1142,7 +1112,6 @@ GameObject:
   - component: {fileID: 8036799934845919117}
   - component: {fileID: 8833117993581820968}
   - component: {fileID: 5061452614351042795}
-  - component: {fileID: 6002998968906872572}
   m_Layer: 0
   m_Name: sticks_stairs (14)
   m_TagString: Untagged
@@ -1681,20 +1650,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2175605872283650046}
   m_Mesh: {fileID: 0}
---- !u!64 &6002998968906872572
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2175605872283650046}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &2510095461757843321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,7 +1662,6 @@ GameObject:
   - component: {fileID: 6420069414356636155}
   - component: {fileID: 2463981103423279945}
   - component: {fileID: 6813313290312310389}
-  - component: {fileID: 6922096288021869878}
   m_Layer: 0
   m_Name: sticks_stairs
   m_TagString: Untagged
@@ -2362,20 +2316,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2510095461757843321}
   m_Mesh: {fileID: 0}
---- !u!64 &6922096288021869878
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2510095461757843321}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3090615940039880726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,7 +2328,6 @@ GameObject:
   - component: {fileID: 4400178609169512597}
   - component: {fileID: 7034780585064190614}
   - component: {fileID: 3179772917238219039}
-  - component: {fileID: 2007572646791422240}
   m_Layer: 0
   m_Name: sticks_stairs (1)
   m_TagString: Untagged
@@ -2986,20 +2925,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3090615940039880726}
   m_Mesh: {fileID: 0}
---- !u!64 &2007572646791422240
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3090615940039880726}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3502955992109082633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3012,7 +2937,6 @@ GameObject:
   - component: {fileID: 8848806346750150029}
   - component: {fileID: 8069173189892098460}
   - component: {fileID: 2229713495342467426}
-  - component: {fileID: 8986202250755347061}
   m_Layer: 0
   m_Name: sticks_stairs (13)
   m_TagString: Untagged
@@ -3551,20 +3475,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3502955992109082633}
   m_Mesh: {fileID: 0}
---- !u!64 &8986202250755347061
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3502955992109082633}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &3842241035492681718
 GameObject:
   m_ObjectHideFlags: 0
@@ -3577,7 +3487,6 @@ GameObject:
   - component: {fileID: 6587673833219884350}
   - component: {fileID: 9020329960666562315}
   - component: {fileID: 1005420086477062216}
-  - component: {fileID: 7500418351193183086}
   m_Layer: 0
   m_Name: sticks_stairs (9)
   m_TagString: Untagged
@@ -4116,20 +4025,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3842241035492681718}
   m_Mesh: {fileID: 0}
---- !u!64 &7500418351193183086
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3842241035492681718}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5078029647725324752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,7 +4037,6 @@ GameObject:
   - component: {fileID: 6974530951796045906}
   - component: {fileID: 5520767426971384430}
   - component: {fileID: 5243590794830044393}
-  - component: {fileID: 8125340383491700795}
   m_Layer: 0
   m_Name: sticks_stairs (2)
   m_TagString: Untagged
@@ -4695,20 +4589,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5078029647725324752}
   m_Mesh: {fileID: 0}
---- !u!64 &8125340383491700795
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5078029647725324752}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5446653807557774082
 GameObject:
   m_ObjectHideFlags: 0
@@ -4721,7 +4601,6 @@ GameObject:
   - component: {fileID: 7618972384358620074}
   - component: {fileID: 235940653455503612}
   - component: {fileID: 4378718705718145231}
-  - component: {fileID: 1374369975063966395}
   m_Layer: 0
   m_Name: sticks_stairs (7)
   m_TagString: Untagged
@@ -5260,20 +5139,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5446653807557774082}
   m_Mesh: {fileID: 0}
---- !u!64 &1374369975063966395
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5446653807557774082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &5561169656516092300
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,7 +5151,6 @@ GameObject:
   - component: {fileID: 5080914525387005770}
   - component: {fileID: 1530022299125267998}
   - component: {fileID: 7733487327468004655}
-  - component: {fileID: 7790409656204812957}
   m_Layer: 0
   m_Name: sticks_stairs (3)
   m_TagString: Untagged
@@ -5825,20 +5689,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5561169656516092300}
   m_Mesh: {fileID: 0}
---- !u!64 &7790409656204812957
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5561169656516092300}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6452783098511825836
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,7 +5701,6 @@ GameObject:
   - component: {fileID: 5313680400985760459}
   - component: {fileID: 1222938901535802614}
   - component: {fileID: 4537006606181298711}
-  - component: {fileID: 3973543889179317499}
   m_Layer: 0
   m_Name: sticks_stairs (2)
   m_TagString: Untagged
@@ -6390,20 +6239,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6452783098511825836}
   m_Mesh: {fileID: 0}
---- !u!64 &3973543889179317499
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6452783098511825836}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6710710065646792641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6416,7 +6251,6 @@ GameObject:
   - component: {fileID: 5279586929998028633}
   - component: {fileID: 1746362063333018846}
   - component: {fileID: 3271590973208243530}
-  - component: {fileID: 7650771637759994339}
   m_Layer: 0
   m_Name: sticks_stairs (6)
   m_TagString: Untagged
@@ -6955,20 +6789,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6710710065646792641}
   m_Mesh: {fileID: 0}
---- !u!64 &7650771637759994339
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6710710065646792641}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &6881878260014732491
 GameObject:
   m_ObjectHideFlags: 0
@@ -6981,7 +6801,6 @@ GameObject:
   - component: {fileID: 5243533688944381124}
   - component: {fileID: 8657091839151276769}
   - component: {fileID: 8795928599004888351}
-  - component: {fileID: 7225644042264165914}
   m_Layer: 0
   m_Name: sticks_stairs (5)
   m_TagString: Untagged
@@ -7520,20 +7339,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6881878260014732491}
   m_Mesh: {fileID: 0}
---- !u!64 &7225644042264165914
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6881878260014732491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &7126269243819165092
 GameObject:
   m_ObjectHideFlags: 0
@@ -7546,7 +7351,6 @@ GameObject:
   - component: {fileID: 8370440314230764314}
   - component: {fileID: 2424743589165881851}
   - component: {fileID: 3821425395885475390}
-  - component: {fileID: 830372733954027408}
   m_Layer: 0
   m_Name: sticks_stairs
   m_TagString: Untagged
@@ -8145,20 +7949,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7126269243819165092}
   m_Mesh: {fileID: 0}
---- !u!64 &830372733954027408
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7126269243819165092}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &7574228957917007690
 GameObject:
   m_ObjectHideFlags: 0
@@ -8171,7 +7961,6 @@ GameObject:
   - component: {fileID: 463420911115603397}
   - component: {fileID: 6890913929360993563}
   - component: {fileID: 9004853323141080733}
-  - component: {fileID: 7541581572521168576}
   m_Layer: 0
   m_Name: sticks_stairs (4)
   m_TagString: Untagged
@@ -8710,20 +8499,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7574228957917007690}
   m_Mesh: {fileID: 0}
---- !u!64 &7541581572521168576
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7574228957917007690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &8327434392173556495
 GameObject:
   m_ObjectHideFlags: 0
@@ -8736,7 +8511,6 @@ GameObject:
   - component: {fileID: 5682961576846939630}
   - component: {fileID: 7187046206847280144}
   - component: {fileID: 7959176554373618797}
-  - component: {fileID: 1377843694649520157}
   m_Layer: 0
   m_Name: sticks_stairs (10)
   m_TagString: Untagged
@@ -9275,20 +9049,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8327434392173556495}
   m_Mesh: {fileID: 0}
---- !u!64 &1377843694649520157
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8327434392173556495}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &8635622722547844449
 GameObject:
   m_ObjectHideFlags: 0
@@ -9301,7 +9061,6 @@ GameObject:
   - component: {fileID: 4862219567961439596}
   - component: {fileID: 7694581816810649634}
   - component: {fileID: 2113101242374852793}
-  - component: {fileID: 8213709849615384354}
   m_Layer: 0
   m_Name: sticks_stairs (8)
   m_TagString: Untagged
@@ -9840,20 +9599,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8635622722547844449}
   m_Mesh: {fileID: 0}
---- !u!64 &8213709849615384354
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8635622722547844449}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1 &9023861778212289094
 GameObject:
   m_ObjectHideFlags: 0
@@ -9866,7 +9611,6 @@ GameObject:
   - component: {fileID: 5026569765479118629}
   - component: {fileID: 814754495158188956}
   - component: {fileID: 5562333198660142798}
-  - component: {fileID: 2523803620170794850}
   m_Layer: 0
   m_Name: sticks_stairs (1)
   m_TagString: Untagged
@@ -10404,18 +10148,4 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9023861778212289094}
-  m_Mesh: {fileID: 0}
---- !u!64 &2523803620170794850
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9023861778212289094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
   m_Mesh: {fileID: 0}
