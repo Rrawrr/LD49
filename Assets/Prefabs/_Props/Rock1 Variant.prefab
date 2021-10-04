@@ -42,8 +42,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalPosition.y
@@ -55,11 +67,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.y
@@ -67,7 +79,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -83,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_Name
-      value: Rock1
+      value: Rock1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_TagString

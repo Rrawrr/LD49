@@ -5,6 +5,7 @@ using Cinemachine;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = System.Random;
 
 namespace project
 {
@@ -16,6 +17,7 @@ namespace project
         [SerializeField] private float force = 2f;
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
+        [SerializeField] private int itemsToSpawn = 10;
 
         [SerializeField] private GameObject _activeObject;
         [SerializeField] private TextMeshProUGUI objectsText;
@@ -29,7 +31,7 @@ namespace project
         }
 
         [SerializeField] private GameObject particles;
-        //[SerializeField] public Dictionary<GameObject,string> objectsToFind;
+        [SerializeField] private Transform boundsTransform;
         [Serializable]
         public struct ObjectToFind
         {
@@ -38,6 +40,10 @@ namespace project
         }
 
         public List<ObjectToFind> objectsToFind; 
+        [SerializeField] private List<GameObject> items;
+        private AudioSource audioSource;
+        [SerializeField] private AudioClip[] clips;
+        private int audioNumber;
 
 
         private Camera camera;
@@ -56,6 +62,7 @@ namespace project
 
         void Awake()
         {
+            audioSource = GetComponent<AudioSource>();
             activeObject = _activeObject;
             SetPlayerObject(activeObject);
             SetObjectsNamesList();
@@ -70,6 +77,13 @@ namespace project
                 I = this;
             }
 
+        }
+
+        void Start()
+        {
+            audioSource.clip = clips[0];
+            audioNumber = 0;
+            audioSource.Play();
         }
 
         void Update()
@@ -99,6 +113,22 @@ namespace project
             {
                 Restart();
             }
+
+            if (!audioSource.isPlaying)
+            {
+                audioNumber++;
+                audioSource.clip = clips[audioNumber];
+                audioSource.Play();
+                if (audioNumber >= 2)
+                {
+                    audioNumber = 0;
+                }
+            }
+
+            //if (Input.GetKeyDown(KeyCode.P))
+            //{
+            //    CreateRandomItems();
+            //}
         }
 
         private void AddHorizontalImpulse()
@@ -152,9 +182,9 @@ namespace project
             cameraVirt.LookAt = go.transform;
         }
 
-        public void PlayParticlesAtPosition(Vector3 pos)
+        public void PlayParticlesAtPosition(Transform transform)
         {
-            Instantiate(particles, pos,Quaternion.identity);
+            Instantiate(particles, transform.position,Quaternion.identity,transform);
         }
 
 
@@ -185,11 +215,12 @@ namespace project
         {
             if (isObjectToFind(obj))
             {
-                Debug.Log($"Found object {GetObjectToFind(obj)}");
+                //Debug.Log($"Found object {GetObjectToFind(obj)}");
                 var foundedObject = GetObjectToFind(obj);
                 objectsToFind.Remove(foundedObject);
-
                 SetObjectsNamesList();
+
+                CreateRandomItems();
             }
         }
 
@@ -202,6 +233,31 @@ namespace project
                 string name = $"{obj.name} \n";
                 objectsText.text += name;
             }
+        }
+
+
+        private void CreateRandomItems()
+        {
+            for (int i = 0; i < itemsToSpawn; i++)
+            {
+                var rndItem = items[UnityEngine.Random.Range(0, items.Count)];
+                Vector3 rndPos = RandomPointInBounds(boundsTransform.GetComponent<Renderer>().bounds);
+                Instantiate(rndItem, rndPos, Quaternion.identity);
+            }
+            //foreach (var item in items)
+            //{
+            //    Vector3 rndPos = RandomPointInBounds(boundsTransform.GetComponent<Renderer>().bounds);
+            //    Instantiate(item, rndPos, Quaternion.identity);
+            //}
+        }
+
+        public static Vector3 RandomPointInBounds(Bounds bounds)
+        {
+            return new Vector3(
+                UnityEngine.Random.Range(bounds.min.x, bounds.max.x),
+                UnityEngine.Random.Range(bounds.min.y, bounds.max.y),
+                UnityEngine.Random.Range(bounds.min.z, bounds.max.z)
+            );
         }
 
     }
