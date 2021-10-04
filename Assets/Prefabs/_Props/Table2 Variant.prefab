@@ -43,27 +43,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalScale.x
-      value: 183.10222
+      value: 61.154312
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalScale.y
-      value: 183.10222
+      value: 61.154312
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalScale.z
-      value: 9.680823
+      value: 3.2332983
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -20.469303
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.75
+      value: -2.9771688
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -32.897198
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalRotation.w
@@ -75,7 +75,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_LocalRotation.z
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_Name
-      value: Table2
+      value: Table2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72df9281d97a56e45b151c93995ffe71, type: 3}
       propertyPath: m_TagString

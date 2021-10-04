@@ -47,23 +47,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.72152
+      value: 4.7215195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.72152
+      value: 4.7215195
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75.908
+      value: 9.1406975
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.084
+      value: -3.2711687
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.172
+      value: -43.537197
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.w
@@ -75,7 +75,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_LocalRotation.z
@@ -99,7 +99,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0930936606c574e9da76e0748a871954, type: 2}
     - target: {fileID: 919132149155446097, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_Name
-      value: Rock1 Variant
+      value: Rock1 Variant (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69a7d48de29710a4386a13286101a299, type: 3}
       propertyPath: m_TagString
