@@ -18,6 +18,8 @@ namespace project
         [SerializeField] private float jumpForce = 3f;
         [SerializeField] private float cameraRotation = 2f;
         [SerializeField] private int itemsToSpawn = 10;
+        [SerializeField] public Material material;
+        [SerializeField] public Material material_abadoned;
 
         [SerializeField] private GameObject _activeObject;
         [SerializeField] private TextMeshProUGUI objectsText;
@@ -81,9 +83,25 @@ namespace project
 
         void Start()
         {
-            audioSource.clip = clips[0];
-            audioNumber = 0;
-            audioSource.Play();
+            //audioSource.clip = clips[0];
+            //audioNumber = 0;
+            //audioSource.Play();
+	    StartCoroutine(routine:PlayMusicCoroutine());
+        }
+
+IEnumerator PlayMusicCoroutine()
+        {
+            while (true)
+            {
+                foreach (var clip in clips)
+                {
+                    audioSource.clip = clip;
+                    float length = audioSource.clip.length;
+
+                    audioSource.Play();
+                    yield return new WaitForSeconds(length);
+                }
+            }
         }
 
         void Update()
@@ -114,16 +132,16 @@ namespace project
                 Restart();
             }
 
-            if (!audioSource.isPlaying)
-            {
-                audioNumber++;
-                audioSource.clip = clips[audioNumber];
-                audioSource.Play();
-                if (audioNumber >= 2)
-                {
-                    audioNumber = 0;
-                }
-            }
+            //if (!audioSource.isPlaying)
+            //{
+            //    audioNumber++;
+            //    audioSource.clip = clips[audioNumber];
+            //    audioSource.Play();
+            //    if (audioNumber >= 2)
+            //    {
+            //        audioNumber = 0;
+            //    }
+            //}
 
             //if (Input.GetKeyDown(KeyCode.P))
             //{
@@ -234,6 +252,7 @@ namespace project
                 objectsText.text += name;
             }
         }
+
 
 
         private void CreateRandomItems()
