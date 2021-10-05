@@ -37,7 +37,7 @@ namespace project
             if (isActive && other.GetComponent<ActiveObject>() == null)
             {
                 Controller.I.SetPlayerObject(other);
-                //other.GetComponent<MeshRenderer>().material.color = Color.red;
+                other.GetComponent<MeshRenderer>().material = Controller.I.material;
                 other.gameObject.AddComponent<ActiveObject>();
 
                 Controller.I.PlayParticlesAtPosition(other.transform);
@@ -54,7 +54,7 @@ namespace project
                 part.Stop();
             }
             isActive = false;
-            //GetComponent<MeshRenderer>().material.color = Color.green;
+            GetComponent<MeshRenderer>().material = Controller.I.material_abadoned;
             yield return new WaitForSeconds(delayToChangeObject);
             Destroy(gameObject.GetComponent<ActiveObject>());
         }
